@@ -57,6 +57,7 @@ if(mysqli_num_rows($result)>0){
                     <label> Confirm Password</label>
                     <input type="password" name="cpassword" placeholder=" Confirm Password" required>
                     <button type="submit" name="submit" class="btn btn-primary"> Sign Up </button>
+                    <p>Already Signed Up? <a href="login.php">Log In</a></p>
                 </form>
 </div>
 </div>

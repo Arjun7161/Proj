@@ -4,3 +4,101 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
+
+/*  Sign Up page */
+.signup-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 60px;
+    background-color: aliceblue;
+}
+
+.signup-container form {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    background: aliceblue;
+    text-align: center;
+    width: 500px;
+}
+
+.signup-container form h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.signup-container form input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+.signup-container form button {
+    width: 50%;
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+.signup-container form p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: crimson;
+}
+
+.signup-container form p a {
+    color: rgb(20, 23, 220);
+}
+
+/* Log In page */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 60px;
+    background-color: aliceblue;
+}
+
+.login-container form {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    background: aliceblue;
+    text-align: center;
+    width: 500px;
+}
+
+.login-container form h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.login-container form input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+.login-container form button {
+    width: 50%;
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+.login-container form p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: crimson;
+}
+
+.login-container form p a {
+    color: rgb(20, 23, 220);
+}

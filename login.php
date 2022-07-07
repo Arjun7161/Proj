@@ -49,7 +49,7 @@ if(mysqli_num_rows($result)>0){
                 <label>Password</label>
                 <input type="password" name="password"  placeholder=" Enter Password" required>
                 <button type="submit" name="submits" class="btn btn-primary"> Log In </button>
-                <a href="signup.php">Sign Up</a>
+                <p>New User? <a href="signup.php">Sign Up</a></p>
             </div>
         </form>
 
