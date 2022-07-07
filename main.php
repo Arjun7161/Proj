@@ -1,3 +1,11 @@
+<?php
+session_start();
+ require 'includes/db.php';
+
+ if(!isset($_SESSION['studentid'])){
+    header('location:login.php');
+ }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +16,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   
+   <p>hello <?php echo $_SESSION['studentid']?></p>
 </body>
 </html>
