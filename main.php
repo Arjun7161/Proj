@@ -17,20 +17,21 @@ session_start();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
 </head>
 <body>
-<div class="container my-container">
-    <div class="row my-row1 ">
-    <div class="navbar">
-        <nav>
-            <ul>
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <p>App Name</p>
+            </div>
+            <nav>
+                <ul id='MenuItems'>
                 <li><a href="main.php">Home</a></li>
                 <li><a href="upload.php">Upload File</a></li>
+                <li><a href="displayfile.php">Grading</a></li>
                 <li><a href="logout.php">Log Out</a></li>
-            </ul>
-        </nav>
+                </ul>
+            </nav>
         </div>
     </div>
-</div>
-    
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 </body>
