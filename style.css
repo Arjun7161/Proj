@@ -5,54 +5,6 @@
     box-sizing: border-box;
 }
 
-.full-page {
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.4)rgba(0, 0, 0, 0.4)), url(Img/calicut1.jpg);
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-
-}
-
-.nav {
-    flex: 1;
-    text-align: right;
-}
-
-nav ul {
-    display: inline-block;
-    list-style: none;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 50px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-size: 20px;
-    color: black;
-    font-family: sans-serif;
-}
-
-nav ul li a:hover {
-    color: aquamarine;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-}
-
 /*  Sign Up page */
 .signup-container {
     min-height: 100vh;
@@ -160,3 +112,43 @@ a {
     font-family: sans-serif;
     background: linear-gradient(120deg, #292eb9, #7f44ad);
 }*/
+
+
+/*main*/
+.my-row1 {
+    display: contents;
+    justify-content: left;
+}
+
+.my-row h1 {
+    font-size: 20px;
+}
+
+.navbar {
+    height: 2%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    color: black;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+    font-family: 'Fredoka One', cursive;
+    color: black !important;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+nav ul li a {
+    text-decoration: solid;
+    color: black;
+    font-size: 20px;
+}
