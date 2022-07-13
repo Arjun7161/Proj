@@ -1,6 +1,9 @@
 <?php
 session_start();
 require 'includes/db.php';
+if(isset($_SESSION['studentid'])){
+    header('location:main.php');
+ }
 
 if(isset($_POST['submits'])){
 $studentid=mysqli_real_escape_string($conn,$_POST['studentid']);

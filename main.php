@@ -16,6 +16,21 @@ session_start();
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <p>hello <?php echo $_SESSION['studentid']?></p>
+   <div class="full-page">
+    <div class="navbar">
+      <div>
+         <p>App Name</p>
+      </div>
+        <nav>
+            <ul id='links'>
+            <p>hello <?php echo $_SESSION['studentid']?></p>
+                <li><a href="main.php">Home</a></li>
+                <li><a href="upload.php">Upload File</a></li>
+                <li><a href="logout.php">Log Out</a></li>
+            </ul>
+        </nav>
+        </div>
+    </div>
+
 </body>
 </html>
