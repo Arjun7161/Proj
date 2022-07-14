@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
                 $fileNameNew= uniqid('').".".$fileActualExt;
                 $fileDestination='uploads/'.$fileNameNew;
                 move_uploaded_file($fileTmpName,$fileDestination);
-                $sql="insert into upload values ('$student','$fileNameNew')";
+                $sql="insert into upload values ('$student','$fileNameNew','$fileName')";
                 mysqli_query($conn,$sql);
                 header("location:upload.php");
 

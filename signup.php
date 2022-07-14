@@ -11,7 +11,7 @@ $cpass=md5($_POST['cpassword']);
 $s="select*from students where email='$email' && passwords='$pass'";
 $result=mysqli_query($conn,$s);
 if(mysqli_num_rows($result)>0){
-    $error[]='student Id  already exist';
+    $error[]='Already exist';
 
 }else{
     if($pass !=$cpass){
