@@ -87,7 +87,8 @@ if(!isset($_SESSION['studentid'])){
         <div class="col my-col">
         <h1>Welcome <?php echo $_SESSION['studentid']; ?> </h1>
     <?php
-    $sql="SELECT * from upload order by rand() LIMIT 1 ";
+    $student=$_SESSION['studentid'];
+    $sql="SELECT * from upload WHERE studentid!= $student order by rand() LIMIT 1 ";
     $query=mysqli_query($conn,$sql);
     while($ro=mysqli_fetch_array($query)){
         ?>
