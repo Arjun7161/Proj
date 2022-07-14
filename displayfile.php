@@ -69,6 +69,10 @@ if(!isset($_SESSION['studentid'])){
             color: black;
             font-size: 20px;
         }
+
+        body{
+            background-color: rgb(244, 240, 255);
+        }
     </style>
 
 <div class="container my-container">
@@ -91,23 +95,65 @@ if(!isset($_SESSION['studentid'])){
     $sql="SELECT * from upload WHERE studentid!= $student order by rand() LIMIT 1 ";
     $query=mysqli_query($conn,$sql);
     while($ro=mysqli_fetch_array($query)){
+        $rostudentid=$ro['studentid'];
         ?>
         <embed type="application/pdf" src="uploads/<?php echo $ro['file'];?>" width="900" height="600">
         <?php
     }
     ?>
+    <?php
+$conn= mysqli_connect('localhost','root','','user');
+if (isset($_POST['upload'])) {
+    $writing=$_POST['writing'];
+    $presentation=$_POST['presentation'];
+    $content=$_POST['content'];
+    $reference=$_POST['reference'];
+    $student=$_SESSION['studentid'];
+
+    $s="select * from grade WHERE assessed_by= '$student'";
+    $result=mysqli_query($conn,$s);
+    if(mysqli_num_rows($result)>2){
+    $error[]='Already graded three submissions';
+    }else{
+        $sw="select * from grade WHERE assessed_by= '$student' && uploaded_by='$rostudentid'";
+        $results=mysqli_query($conn,$sw);
+    if(mysqli_num_rows($results)>0){
+    $error[]='Already graded this submissions';
+    
+
+    }
+else{
+
+
+    $sq="INSERT INTO grade (assessed_by,uploaded_by,writing,presentation,content,reference) values('$student','$rostudentid','$writing','$presentation','$content','$reference')";
+    mysqli_query($conn,$sq);
+    header('location:main.php');
+}
+    }
+};
+?>
    
     </div>
     <div class="col my-col align-self-center">
+    <form action="" method="POST">
             <p>GRADING</p>
+            <?php
+            if(isset($error)){
+                foreach($error as $error){
+                    echo '<span class="error"> '.$error.' </span>';
+                };
+            };
+            ?>
             <label>Writing:</label>
-            <input type="text" name="writing" required><br>
+            <input type="number" name="writing" value="0" min="0" max="5" step="1" required><br>
             <label>Presentation:</label>
-            <input type="text" name="presentation" required><br>
+            <input type="number" name="presentation" value="0" min="0" max="5" step="1" required><br>
             <label>Content:</label>
-            <input type="text" name="content"  required><br>
+            <input type="number" name="content" value="0" min="0" max="5" step="1" required><br>
             <label>Reference:</label>
-            <input type="text" name="reference"  required><br>
+            <input type="number" name="reference" value="0" min="0" max="5" step="1" required><br><br>
+            <button type="submit" name="upload">Upload Grade</button>
+    </form>
     </div>
     </div>
 
