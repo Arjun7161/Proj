@@ -119,6 +119,11 @@ if (isset($_POST['upload'])) {
         $results=mysqli_query($conn,$sw);
     if(mysqli_num_rows($results)>0){
     $error[]='Already graded this submissions';
+}else{
+    $sr="select * from grade WHERE uploaded_by='$rostudentid'";
+    $resul=mysqli_query($conn,$sr);
+if(mysqli_num_rows($results)>2){
+$error[]='This submissions has been graded three times';
     
 
     }
@@ -130,6 +135,7 @@ else{
     header('location:main.php');
 }
     }
+}
 };
 ?>
    
