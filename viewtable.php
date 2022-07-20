@@ -34,11 +34,14 @@ if(!isset($_SESSION['adminid'])){
             </nav>
         </div>
         <?php
-            $s="show tables where Tables_in_user!='admin' and Tables_in_user!= 'students' ";
+            $s="show tables where Tables_in_user!='admin' and Tables_in_user!= 'students' and Tables_in_user!= 'grade' ";
             $view=mysqli_query($conn,$s);
-            ?>
+        ?>
+       
+
         <p>Select Course:</p>
-        <select>
+        <form action="" method="POST">
+        <select name="course">
           <?php
           while($rows=mysqli_fetch_array($view)){
             ?>
@@ -46,7 +49,9 @@ if(!isset($_SESSION['adminid'])){
             <?php
           }  
           ?>
+          <input type="submit" value="View Table" name="submit">
         </select>
+        </form>
 
     <h2>Student Upload File Table</h2>
     <table class="table">
@@ -58,8 +63,11 @@ if(!isset($_SESSION['adminid'])){
         </th>
         <tbody>
             <?php
+            $cou=($_POST['course']);
+            if(isset($_POST['submit'])){
+                if(!empty($_POST['course'])){
             $conn= mysqli_connect('localhost','root','','user');
-            $sql="SELECT upload.studentid,upload.filename from upload";
+            $sql="SELECT studentid,filename from $cou";
             $result=mysqli_query($conn,$sql);
             while($row=mysqli_fetch_assoc($result)){
                 echo"<tr>
@@ -68,6 +76,9 @@ if(!isset($_SESSION['adminid'])){
             </tr>";
 
             }
+        }
+
+    }
             
             ?>
         </tbody>
