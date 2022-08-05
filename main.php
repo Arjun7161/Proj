@@ -3,7 +3,7 @@ session_start();
  require 'includes/db.php';
 
  if(!isset($_SESSION['studentid'])){
-    header('location:login.php');
+    header('location:home.php');
  }
 ?>
 <!DOCTYPE html>
@@ -24,6 +24,7 @@ session_start();
             </div>
             <nav>
                 <ul id='MenuItems'>
+                <h1>Welcome <?php echo $_SESSION['studentid']; ?> </h1>
                 <li><a href="main.php">Home</a></li>
                 <li><a href="upload.php">Upload File</a></li>
                 <li><a href="displayfile.php">Grading</a></li>

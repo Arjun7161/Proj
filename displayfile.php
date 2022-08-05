@@ -4,7 +4,7 @@ require 'includes/db.php';
 require 'uploadval.php';
 
 if(!isset($_SESSION['studentid'])){
-    header('location:login.php');
+    header('location:home.php');
  }
 ?>
 <!DOCTYPE html>

@@ -3,7 +3,7 @@ session_start();
 require 'includes/db.php';
 
 if(!isset($_SESSION['studentid'])){
-    header('location:login.php');
+    header('location:home.php');
  }
 ?>
 
@@ -17,6 +17,22 @@ if(!isset($_SESSION['studentid'])){
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="full-page">
+        <div class="navbar">
+            <div>
+                <p>App Name</p>
+            </div>
+            <nav>
+                <ul id='MenuItems'>
+                <h1>Welcome <?php echo $_SESSION['studentid']; ?> </h1>
+                <li><a href="main.php">Home</a></li>
+                <li><a href="upload.php">Upload File</a></li>
+                <li><a href="displayfile.php">Grading</a></li>
+                <li><a href="result.php">Result</a></li>
+                <li><a href="logout.php">Log Out</a></li>
+                </ul>
+            </nav>
+        </div>
 <section>
     <div class="login-container">
     <form action="uploadval.php" method="POST" enctype="multipart/form-data">
@@ -27,5 +43,6 @@ if(!isset($_SESSION['studentid'])){
     </form>
 </div>
 </section>
+</div>
 </body>
 </html>

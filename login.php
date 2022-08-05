@@ -18,7 +18,7 @@ if(mysqli_num_rows($result)>0){
     $_SESSION['studentid']=$row['studentid'];
     header('location:main.php');
    }else{
-    header('location:login.php');
+    header('location:home.php');
    }
 }
 };

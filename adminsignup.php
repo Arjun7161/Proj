@@ -2,7 +2,7 @@
 session_start();
 require 'includes/db.php';
 if(!isset($_SESSION['adminid'])){
-    header('location:adminlogin.php');
+    header('location:home.php');
  }
 
 if(isset($_POST['submit'])){
