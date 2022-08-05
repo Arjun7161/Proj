@@ -2,8 +2,8 @@
 session_start();
  require 'includes/db.php';
 
- if(!isset($_SESSION['studentid'])){
-    header('location:login.php');
+ if(!isset($_SESSION['adminid'])){
+    header('location:adminlogin.php');
  }
 ?>
 <!DOCTYPE html>
@@ -24,10 +24,9 @@ session_start();
             </div>
             <nav>
                 <ul id='MenuItems'>
-                <h1>Welcome <?php echo $_SESSION['studentid']; ?> </h1>
+                <h1>Welcome <?php echo $_SESSION['adminid']; ?> </h1>
                 <li><a href="main.php">Home</a></li>
-                <li><a href="upload.php">Upload File</a></li>
-                <li><a href="displayfile.php">Grading</a></li>
+                <li><a href="viewtable.php">View Upload Table</a></li>
                 <li><a href="logout.php">Log Out</a></li>
                 </ul>
             </nav>
@@ -56,11 +55,13 @@ session_start();
     <table class="table">
         <th>
             <tr>
+                <th> Student ID</th>
                 <th> Writing</th>
                 <th> Presentation</th>
                 <th> Content</th>
                 <th> Reference</th>
                 <th> Final Grade</th>
+                <th> Grade</th>
             </tr>
         </th>
         <tbody>
@@ -70,19 +71,22 @@ session_start();
                 if(!empty($_POST['course'])){
                     $cou=($_POST['course']);
             $conn= mysqli_connect('localhost','root','','user');
-            $student=$_SESSION['studentid'];
-            $sql="SELECT writing, presentation, content , reference , (writing+ presentation+  content + reference)as finalgrade from $cou
-            WHERE uploaded_by= $student" ;
-            
+            $sql="SELECT uploaded_by,writing, presentation, content , reference,format (((writing +presentation +content +reference)/(20*3)*100),0) as finalgrade,
+            case when format (((writing +presentation +content +reference)/(20*3)*100),0)>=80 then'A'
+            when format (((writing +presentation +content +reference)/(20*3)*100),0)>=60 then'B'
+            when format (((writing +presentation +content +reference)/(20*3)*100),0)>=50 then'C'
+            ELSE 'FAIL'
+            END AS grade from $cou" ;
             $result=mysqli_query($conn,$sql);
             while($row=mysqli_fetch_assoc($result)){
                 echo"<tr>
+                <td>". $row["uploaded_by"] ."</td>
                 <td>". $row["writing"] ."</td>
                 <td>". $row["presentation"] ."</td>
                 <td>". $row["content"] ."</td>
                 <td>". $row["reference"] ."</td>
                 <td>". $row["finalgrade"] ."</td>
-
+                <td>". $row["grade"] ."</td>
             </tr>";
 
             }
@@ -93,7 +97,6 @@ session_start();
             ?>
         </tbody>
     </table>
-    
     </div>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>

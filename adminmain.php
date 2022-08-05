@@ -28,6 +28,7 @@ session_start();
                 <li><a href="adminmain.php">Home</a></li>
                 <li><a href="create.php">Create Table</a></li>
                 <li><a href="viewtable.php">View Upload Table</a></li>
+                <li><a href="adminresult.php">View Result Table</a></li>
                 <li><a href="adminsignup.php">Sign Up</a></li>
                 <li><a href="logout.php">Log Out</a></li>
                 </ul>
