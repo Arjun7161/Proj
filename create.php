@@ -35,6 +35,23 @@ if(isset($_POST['create'])){
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="full-page">
+        <div class="navbar">
+            <div>
+                <p>App Name</p>
+            </div>
+            <nav>
+                <ul id='MenuItems'>
+                    <h1>Welcome <?php echo $_SESSION['adminid']; ?></h1>
+                <li><a href="adminmain.php">Home</a></li>
+                <li><a href="viewtable.php">View Upload Files </a></li>
+                <li><a href="adminresult.php">View Result </a></li>
+                <li><a href="logout.php">Log Out</a></li>
+                </ul>
+            </nav>
+        </div>
+        <section>
+    <div class="login-container">
     <p>Create Table</p>
     <?php
             if(isset($error)){
@@ -48,6 +65,8 @@ if(isset($_POST['create'])){
         <input type="text" name="tablename" placeholder="Table Name" required>
         <button type="submit" name="create">Create Table</button>
     </form>
+    </div>
+    </section>
 
 
 

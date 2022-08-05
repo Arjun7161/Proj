@@ -27,8 +27,7 @@ if(!isset($_SESSION['adminid'])){
                     <h1>Welcome <?php echo $_SESSION['adminid']; ?></h1>
                 <li><a href="adminmain.php">Home</a></li>
                 <li><a href="create.php">Create Table</a></li>
-                <li><a href="viewtable.php">View Upload Table</a></li>
-                <li><a href="adminsignup.php">Sign Up</a></li>
+                <li><a href="adminresult.php">View Result </a></li>
                 <li><a href="logout.php">Log Out</a></li>
                 </ul>
             </nav>
@@ -63,16 +62,16 @@ if(!isset($_SESSION['adminid'])){
         </th>
         <tbody>
             <?php
-            $cou=($_POST['course']);
             if(isset($_POST['submit'])){
                 if(!empty($_POST['course'])){
+                    $cou=($_POST['course']);
             $conn= mysqli_connect('localhost','root','','user');
-            $sql="SELECT studentid,uploadedfilename from $cou";
+            $sql="SELECT studentid,filename from $cou";
             $result=mysqli_query($conn,$sql);
             while($row=mysqli_fetch_assoc($result)){
                 echo"<tr>
                 <td>". $row["studentid"] ."</td>
-                <td>". $row["uploadedfilename"] ."</td>
+                <td>". $row["filename"] ."</td>
             </tr>";
 
             }

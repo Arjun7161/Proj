@@ -25,7 +25,7 @@ session_start();
             <nav>
                 <ul id='MenuItems'>
                 <h1>Welcome <?php echo $_SESSION['adminid']; ?> </h1>
-                <li><a href="main.php">Home</a></li>
+                <li><a href="adminmain.php">Home</a></li>
                 <li><a href="viewtable.php">View Upload Table</a></li>
                 <li><a href="logout.php">Log Out</a></li>
                 </ul>
@@ -71,10 +71,10 @@ session_start();
                 if(!empty($_POST['course'])){
                     $cou=($_POST['course']);
             $conn= mysqli_connect('localhost','root','','user');
-            $sql="SELECT uploaded_by,writing, presentation, content , reference,format (((writing +presentation +content +reference)/(20*3)*100),0) as finalgrade,
-            case when format (((writing +presentation +content +reference)/(20*3)*100),0)>=80 then'A'
-            when format (((writing +presentation +content +reference)/(20*3)*100),0)>=60 then'B'
-            when format (((writing +presentation +content +reference)/(20*3)*100),0)>=50 then'C'
+            $sql="SELECT uploaded_by,writing, presentation, content , reference,format (((writing +presentation +content +reference)/(20)*100),0) as finalgrade,
+            case when format (((writing +presentation +content +reference)/(20)*100),0)>=80 then'A'
+            when format (((writing +presentation +content +reference)/(20)*100),0)>=60 then'B'
+            when format (((writing +presentation +content +reference)/(20)*100),0)>=50 then'C'
             ELSE 'FAIL'
             END AS grade from $cou" ;
             $result=mysqli_query($conn,$sql);

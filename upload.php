@@ -17,11 +17,15 @@ if(!isset($_SESSION['studentid'])){
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<section>
+    <div class="login-container">
     <form action="uploadval.php" method="POST" enctype="multipart/form-data">
     <label for="name">Student ID :</label>
         <input type="text" name="names" id="names" required value="<?php echo $_SESSION['studentid']; ?>"><br><br>
         <input type="file" name="file">
         <button type="submit" name="submit">Upload Files</button>
     </form>
+</div>
+</section>
 </body>
 </html>
