@@ -27,6 +27,7 @@ session_start();
                 <li><a href="main.php">Home</a></li>
                 <li><a href="upload.php">Upload File</a></li>
                 <li><a href="displayfile.php">Grading</a></li>
+                <li><a href="result.php">Result</a></li>
                 <li><a href="logout.php">Log Out</a></li>
                 </ul>
             </nav>

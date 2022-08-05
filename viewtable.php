@@ -67,12 +67,12 @@ if(!isset($_SESSION['adminid'])){
             if(isset($_POST['submit'])){
                 if(!empty($_POST['course'])){
             $conn= mysqli_connect('localhost','root','','user');
-            $sql="SELECT studentid,filename from $cou";
+            $sql="SELECT studentid,uploadedfilename from $cou";
             $result=mysqli_query($conn,$sql);
             while($row=mysqli_fetch_assoc($result)){
                 echo"<tr>
                 <td>". $row["studentid"] ."</td>
-                <td>". $row["filename"] ."</td>
+                <td>". $row["uploadedfilename"] ."</td>
             </tr>";
 
             }
