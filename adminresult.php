@@ -12,7 +12,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
+    <title>AdminResult</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
 </head>
@@ -55,6 +55,7 @@ session_start();
     <table class="table">
         <th>
             <tr>
+            <th> Assessor ID</th>
                 <th> Student ID</th>
                 <th> Writing</th>
                 <th> Presentation</th>
@@ -62,6 +63,7 @@ session_start();
                 <th> Reference</th>
                 <th> Final Grade</th>
                 <th> Grade</th>
+                <th colspan="2"> Edit/Delete</th>
             </tr>
         </th>
         <tbody>
@@ -71,7 +73,7 @@ session_start();
                 if(!empty($_POST['course'])){
                     $cou=($_POST['course']);
             $conn= mysqli_connect('localhost','root','','user');
-            $sql="SELECT uploaded_by,writing, presentation, content , reference,format (((writing +presentation +content +reference)/(20)*100),0) as finalgrade,
+            $sql="SELECT assessed_by,uploaded_by,writing, presentation, content , reference,format (((writing +presentation +content +reference)/(20)*100),0) as finalgrade,
             case when format (((writing +presentation +content +reference)/(20)*100),0)>=80 then'A'
             when format (((writing +presentation +content +reference)/(20)*100),0)>=60 then'B'
             when format (((writing +presentation +content +reference)/(20)*100),0)>=50 then'C'
@@ -80,6 +82,7 @@ session_start();
             $result=mysqli_query($conn,$sql);
             while($row=mysqli_fetch_assoc($result)){
                 echo"<tr>
+                <td>". $row["assessed_by"] ."</td>
                 <td>". $row["uploaded_by"] ."</td>
                 <td>". $row["writing"] ."</td>
                 <td>". $row["presentation"] ."</td>
@@ -87,6 +90,8 @@ session_start();
                 <td>". $row["reference"] ."</td>
                 <td>". $row["finalgrade"] ."</td>
                 <td>". $row["grade"] ."</td>
+                <td><a href='edit.php?up=$row[uploaded_by]&as=$row[assessed_by]'><input type='submit' value='Update'></a></td>
+                <td><a href='delete.php?up=$row[uploaded_by]&as=$row[assessed_by]'><input type='submit' value='Delete'></a></td>
             </tr>";
 
             }
