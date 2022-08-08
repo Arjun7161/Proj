@@ -20,7 +20,7 @@ session_start();
     <div class="full-page">
         <div class="navbar">
             <div>
-                <p>App Name</p>
+                <img src="Img/iReview.png" alt="logo">
             </div>
             <nav>
                 <ul id='MenuItems'>
