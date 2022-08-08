@@ -51,8 +51,6 @@ if(isset($_POST['update'])){
 <body>
 <div class="full-page">
         <div class="navbar">
-            <div class="logo"><a href="#"><img src= "Img/Logo.png">
-            </div>
             <nav>
                 <ul id='MenuItems'>
                 <h1>Welcome <?php echo $_SESSION['adminid']; ?> </h1>
@@ -70,7 +68,6 @@ if(isset($_POST['update'])){
         <table class="table">
             <th>
                 <tr>
-                    <th> Assessor ID</th>
                     <td><input type="hidden" value="<?php echo "$as" ?>" name= "as" required></td>
                 </tr>
                 <tr>

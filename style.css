@@ -10,10 +10,9 @@ body {
 }
 
 .logo img {
-    position: absolute;
     margin-top: 10px;
     margin-left: 10px;
-    height: 150px;
+    width: 150px;
 }
 
 /*  Sign Up page */
@@ -132,7 +131,7 @@ body {
     background: linear-gradient(to right, rgb(244, 240, 255), rgb(255, 240, 252));
     background-position: center;
     background-size: cover;
-    position: relative;
+    position: absolute;
 }
 
 .navbar {
