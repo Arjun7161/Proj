@@ -47,6 +47,7 @@ session_start();
             <?php
           }  
           ?>
+          <input type="text" name="search" placeholder="Student ID">
           <input type="submit" value="View Table" name="submit">
         </select>
         </form>
@@ -69,16 +70,17 @@ session_start();
         <tbody>
             <?php
             
-            if(isset($_POST['submit'])){
-                if(!empty($_POST['course'])){
+            if(isset($_POST['submit']) && isset($_POST['search'])){
+                if(!empty($_POST['course']) ){
                     $cou=($_POST['course']);
             $conn= mysqli_connect('localhost','root','','user');
+            $search=mysqli_real_escape_string($conn,$_POST['search']);
             $sql="SELECT assessed_by,uploaded_by,writing, presentation, content , reference,format (((writing +presentation +content +reference)/(20)*100),0) as finalgrade,
             case when format (((writing +presentation +content +reference)/(20)*100),0)>=80 then'A'
             when format (((writing +presentation +content +reference)/(20)*100),0)>=60 then'B'
             when format (((writing +presentation +content +reference)/(20)*100),0)>=50 then'C'
             ELSE 'FAIL'
-            END AS grade from $cou" ;
+            END AS grade from $cou where uploaded_by like'%$search'";
             $result=mysqli_query($conn,$sql);
             while($row=mysqli_fetch_assoc($result)){
                 echo"<tr>

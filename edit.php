@@ -51,7 +51,7 @@ if(isset($_POST['update'])){
 <body>
 <div class="full-page">
         <div class="navbar">
-            <div class="logo"><a href="#"><img src= "Img/Logo.jpg">
+            <div class="logo"><a href="#"><img src= "Img/Logo.png">
             </div>
             <nav>
                 <ul id='MenuItems'>
