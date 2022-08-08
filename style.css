@@ -10,9 +10,9 @@ body {
 }
 
 .logo img {
-    margin-top: 10px;
+    position: absolute;
+    margin-top: 5px;
     margin-left: 10px;
-    width: 150px;
 }
 
 /*  Sign Up page */
