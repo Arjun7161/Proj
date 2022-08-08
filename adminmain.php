@@ -17,20 +17,19 @@ session_start();
    
 </head>
 <body>
-    <div class="hero">  
-            <nav>
+    <div class="hero">
+        <nav>
             <h2 class="logo">i<span>Review</span></h2>
-                <ul>
-                    <h1>Welcome <?php echo $_SESSION['adminid']; ?></h1>
+            <ul>
+                <h1>Welcome <?php echo $_SESSION['adminid']; ?></h1>
                 <li><a href="adminmain.php">Home</a></li>
                 <li><a href="create.php">Create Table</a></li>
                 <li><a href="viewtable.php">View Upload Table</a></li>
                 <li><a href="adminresult.php">View Result Table</a></li>
                 <li><a href="adminsignup.php">Sign Up</a></li>
                 <li><a href="logout.php">Log Out</a></li>
-                </ul>
-            </nav>
-        </div>
+            </ul>
+        </nav>
     </div>
 
 </body>
