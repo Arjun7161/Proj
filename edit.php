@@ -51,6 +51,8 @@ if(isset($_POST['update'])){
 <body>
 <div class="full-page">
         <div class="navbar">
+        <img src="Img/iReview.png" alt="logo">
+            <h2>IReview</h2>
             <nav>
                 <ul id='MenuItems'>
                 <h1>Welcome <?php echo $_SESSION['adminid']; ?> </h1>

@@ -30,14 +30,16 @@ if(mysqli_num_rows($result)>0){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<section>
-    <div class="login-container">
+<div class="banner">
+    <div class="navbar">
+        <img src="Img/iReview.png"  class="logo" alt="logo">
+    </div>
+    <div class="content">
         <form action="" method="post">
-            <div class="login">
-                <h1>Log In</h1>
+                <h2>Log In</h2><br>
                 <?php
             if(isset($error)){
                 foreach($error as $error){
@@ -45,17 +47,16 @@ if(mysqli_num_rows($result)>0){
                 };
             };
             ?>
-                <label>Student ID</label>
-                <input type="text" name="studentid"  placeholder="Student ID" required>
-                <label>Email</label>
-                <input type="text" name="email"  placeholder="Email" required>
-                <label>Password</label>
-                <input type="password" name="password"  placeholder=" Enter Password" required>
+                <label>Student ID</label><br>
+                <input type="text" name="studentid"  placeholder="Student ID" required><br>
+                <label>Email</label><br>
+                <input type="text" name="email"  placeholder="Email" required><br>
+                <label>Password</label><br>
+                <input type="password" name="password"  placeholder=" Enter Password" required><br>
                 <button type="submit" name="submits" class="btn btn-primary"> Log In </button>
                 <p>New User? <a href="signup.php">Sign Up</a></p>
-            </div>
         </form>
-
+</div>
     </div>
 </section>
 </body>

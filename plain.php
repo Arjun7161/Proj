@@ -61,6 +61,11 @@ if(isset($_POST['create'])){
                 <button type="submit" name="create">Create Table</button>
             </form>
     </div>
+    <footer class="footer">
+    <p>copyright</p>
+</footer>
 </div>
+
+
 </body>
 </html>

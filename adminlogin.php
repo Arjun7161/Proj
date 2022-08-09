@@ -30,32 +30,34 @@ if(mysqli_num_rows($result)>0){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Log In</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<section>
-    <div class="login-container">
+<div class="banner">
+    <div class="navbar">
+        <img src="Img/iReview.png"  class="logo" alt="logo">
+    </div>
+    <div class="content">
         <form action="" method="post">
-            <div class="login">
-                <h1>Log In</h1>
-                <?php
+            <h1>Log In</h1>
+            <?php
             if(isset($error)){
                 foreach($error as $error){
                     echo '<span class="error"> '.$error.' </span>';
                 };
             };
             ?>
-                <label>Admin ID</label>
-                <input type="text" name="adminid"  placeholder="Admin ID" required>
-                <label>Email</label>
-                <input type="text" name="email"  placeholder="Email" required>
-                <label>Password</label>
-                <input type="password" name="password"  placeholder=" Enter Password" required>
+                <label>Admin ID</label><br>
+                <input type="text" name="adminid"  placeholder="Admin ID" required><br>
+                <label>Email ID</label><br>
+                <input type="text" name="email"  placeholder="Email" required><br>
+                <label>Password</label><br>
+                <input type="password" name="password"  placeholder=" Enter Password" required><br>
                 <button type="submit" name="submits" class="btn btn-primary"> Log In </button>
-            </div>
         </form>
-
     </div>
-</section>
+
+</div>
+
 </body>
 </html>

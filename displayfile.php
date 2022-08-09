@@ -49,6 +49,7 @@ if(!isset($_SESSION['studentid'])){
             height: 2%;
             display: flex;
             align-items: center;
+            color: purple;
         }
         .navbar a{
             color: black;
@@ -78,6 +79,8 @@ if(!isset($_SESSION['studentid'])){
 <div class="container my-container">
     <div class="row my-row1 ">
     <div class="navbar">
+    <img src="Img/iReview.png" alt="logo">
+            <h2>IReview</h2>
         <nav>
             <ul>
                 <li><a href="main.php">Home</a></li>

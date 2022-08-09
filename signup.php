@@ -36,6 +36,7 @@ if(mysqli_num_rows($result)>0){
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<img src="Img/iReview.png" alt="logo">
 <section>
         <div class="signup-container">
         <div class="signup">

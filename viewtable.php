@@ -18,13 +18,13 @@ if(!isset($_SESSION['adminid'])){
 </head>
 <body>
 <div class="full-page">
-        <div class="navbar">
-            <div>
-                <p>App Name</p>
-            </div>
+<div class="navbar">
+<img src="Img/iReview.png"  class="logo" alt="logo">
+        
+        
             <nav>
                 <ul id='MenuItems'>
-                    <h1>Welcome <?php echo $_SESSION['adminid']; ?></h1>
+                <h2>Welcome <?php echo $_SESSION['adminid']; ?></h2>
                 <li><a href="adminmain.php">Home</a></li>
                 <li><a href="create.php">Create Table</a></li>
                 <li><a href="adminresult.php">View Result </a></li>
