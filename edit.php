@@ -54,7 +54,7 @@ if(isset($_POST['update'])){
         <img src="Img/200.png" alt="logo">
         <h2>Welcome <?php echo $_SESSION['adminid']; ?> </h2>
             <nav>
-                <ul >
+                <ul>
                 <li><a href="adminmain.php">Home</a></li>
                 <li><a href="viewtable.php">View Files Uploaded</a></li>
                 <li><a href="adminresult.php">View Result</a></li>
