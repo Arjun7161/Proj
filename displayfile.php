@@ -78,7 +78,6 @@ if(!isset($_SESSION['studentid'])){
 <div class="container my-container">
     <div class="row my-row1 ">
     <div class="navbar">
-    <img src="Img/200.png" alt="logo">
         <nav>
             <ul>
                 <li><a href="main.php">Home</a></li>
