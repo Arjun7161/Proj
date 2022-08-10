@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    
 </head>
 <body>
 <div class="banner">
@@ -15,7 +15,7 @@
     <div class="content">
     <div>
     <img src="Img/admin1.png" alt="logo">
-        <li><a href="adminlogin.php">Admin Log In</a></li><br>
+        <li><a href="adminlogin.php">Admin Log In <style>a{color: white;}</style></a></li><br>
         <br>
         <img src="Img/student1.jpg" alt="logo">
         <li><a href="login.php">Student Log In</a></li>
@@ -24,8 +24,7 @@
     </div>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
 
 </body>
 </html>
