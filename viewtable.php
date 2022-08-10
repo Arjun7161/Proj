@@ -13,21 +13,22 @@ if(!isset($_SESSION['adminid'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Table</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-<div class="full-page">
+<div class="banner">
 <div class="navbar">
-<img src="Img/iReview.png"  class="logo" alt="logo">
+<img src="Img/200.png"  class="logo" alt="logo">
+<h2>Welcome <?php echo $_SESSION['adminid']; ?></h2>
         
         
             <nav>
-                <ul id='MenuItems'>
-                <h2>Welcome <?php echo $_SESSION['adminid']; ?></h2>
+                <ul>
+
                 <li><a href="adminmain.php">Home</a></li>
                 <li><a href="create.php">Create Table</a></li>
-                <li><a href="adminresult.php">View Result </a></li>
+                <li><a href="adminresult.php">View Grades </a></li>
                 <li><a href="logout.php">Log Out</a></li>
                 </ul>
             </nav>
@@ -38,7 +39,7 @@ if(!isset($_SESSION['adminid'])){
         ?>
        
 
-        <p>Select Course:</p>
+        <p>Select Course:<style>p{color:white};</style></p>
         <form action="" method="POST">
         <select name="course">
           <?php
@@ -52,7 +53,7 @@ if(!isset($_SESSION['adminid'])){
         </select>
         </form>
 
-    <h2>Student Upload File Table</h2>
+    <h2>Student Upload File Table <style>h2{color:white};</style></h2>
     <table class="table">
         <th>
             <tr>

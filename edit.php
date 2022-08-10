@@ -46,55 +46,51 @@ if(isset($_POST['update'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="full-page">
+<div class="banner">
         <div class="navbar">
-        <img src="Img/iReview.png" alt="logo">
-            <h2>IReview</h2>
+        <img src="Img/200.png" alt="logo">
+        <h2>Welcome <?php echo $_SESSION['adminid']; ?> </h2>
             <nav>
-                <ul id='MenuItems'>
-                <h1>Welcome <?php echo $_SESSION['adminid']; ?> </h1>
+                <ul >
                 <li><a href="adminmain.php">Home</a></li>
-                <li><a href="viewtable.php">View Upload Table</a></li>
+                <li><a href="viewtable.php">View Files Uploaded</a></li>
                 <li><a href="adminresult.php">View Result</a></li>
                 <li><a href="logout.php">Log Out</a></li>
                 </ul>
             </nav>
         </div>
 <section>
-    <div class="login-container">
+    <div class="content">
     <form action="" method="POST">
         <h2>Student Result </h2>
-        <table class="table">
-            <th>
-                <tr>
-                    <td><input type="hidden" value="<?php echo "$as" ?>" name= "as" required></td>
+        <input type="hidden" value="<?php echo "$as" ?>" name= "as" required></td><br>
                 </tr>
                 <tr>
-                    <th> Student ID</th>
-                    <td><input type="hidden" value="<?php echo "$up" ?>" name= "up" required></td>
+                    <th> Student ID</th><br>
+                    <td><input type="hidden" value="<?php echo "$up" ?>" name= "up" required></td><br>
                 </tr>
                 <tr>
-                    <th> Writing</th>
-                    <td><input type="text" value="<?php echo "$wr" ?>" name= "writing" required></td>
+                    <th> Writing</th><br>
+                    <td><input type="text" value="<?php echo "$wr" ?>" name= "writing" required></td><br>
                 </tr>
                 <tr>
-                    <th> Presentation</th>
-                    <td><input type="text" value="<?php echo "$pr" ?>" name= "presentation" required></td>
+                    <th> Presentation</th><br>
+                    <td><input type="text" value="<?php echo "$pr" ?>" name= "presentation" required></td><br>
                 </tr>
                 <tr>
-                    <th> Content</th>
-                    <td><input type="text" value="<?php echo "$co"; ?>" name= "content" required></td>
+                    <th> Content</th><br>
+                    <td><input type="text" value="<?php echo "$co"; ?>" name= "content" required></td><br>
                 </tr>
                 <tr>
-                    <th> Reference</th>
-                    <td><input type="text" value="<?php echo "$re" ?>" name= "reference" required></td>
+                    <th> Reference</th><br>
+                    <td><input type="text" value="<?php echo "$re" ?>" name= "reference" required></td><br>
                 </tr>
             
             <tr>
-            <td><input type="submit" id="button" name="update" value="Update student result"></a></td>
+            <td><input type="submit" id="button" name="update" value="Update student result"></a></td><br>
         </tr>
         </th>
             <tbody>

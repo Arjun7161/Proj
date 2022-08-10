@@ -19,13 +19,13 @@ session_start();
 <body>
     <div class="banner">
         <div class="navbar">
-        <img src="Img/iReview.png"  class="logo" alt="logo">
+        <img src="Img/200.png"  class="logo" alt="logo">
     <h2>Welcome <?php echo $_SESSION['studentid']; ?></h2>
             <nav>
                 <ul>
                 <li><a href="main.php">Home</a></li>
                 <li><a href="upload.php">Upload File</a></li>
-                <li><a href="displayfile.php">Grading</a></li>
+                <li><a href="displayfile.php">Review</a></li>
                 <li><a href="result.php">Result</a></li>
                 <li><a href="logout.php">Log Out</a></li>
                 </ul>

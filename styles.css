@@ -7,7 +7,7 @@
 
 .banner {
     width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(Img/background.jpg);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(Img/back1.png);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -35,13 +35,15 @@
 }
 
 .navbar h2 {
-    color: whitesmoke;
+    color: white;
+    font-weight: bold;
 }
 
 .navbar ul li a {
     text-decoration: none;
-    color: whitesmoke;
+    color: white;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .navbar ul li::after {
@@ -109,4 +111,20 @@ p h2 {
 .footer p {
 
     color: wheat;
+}
+
+tr {
+    color: white;
+}
+
+.logos {
+    cursor: pointer;
+    margin-top: 100px;
+}
+
+
+.container {
+    text-align: center;
+
+
 }

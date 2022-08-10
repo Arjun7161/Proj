@@ -38,11 +38,11 @@ if(mysqli_num_rows($result)>0){
 <body>
 <div class="banner">
     <div class="navbar">
-        <img src="Img/iReview.png"  class="logo" alt="logo">
+        <img src="Img/200.png"  class="logo" alt="logo">
     </div>
         <div class="content">
             <form action="" method="post">
-            <h2>Sign Up</h2><br>
+            <h2>Sign Up <style> h2 {color: white;}</style></h2><br>
             <?php
             if(isset($error)){
                 foreach($error as $error){

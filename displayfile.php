@@ -14,7 +14,7 @@ if(!isset($_SESSION['studentid'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
 </head>
 <body>
@@ -70,17 +70,15 @@ if(!isset($_SESSION['studentid'])){
             color: black;
             font-size: 20px;
         }
-
-        body{
-            background-color: rgb(244, 240, 255);
+        label{
+            color:white;
         }
     </style>
-
+ <div class="banner">
 <div class="container my-container">
     <div class="row my-row1 ">
     <div class="navbar">
-    <img src="Img/iReview.png" alt="logo">
-            <h2>IReview</h2>
+    <img src="Img/200.png" alt="logo">
         <nav>
             <ul>
                 <li><a href="main.php">Home</a></li>
@@ -92,7 +90,7 @@ if(!isset($_SESSION['studentid'])){
     </div>
     <div class="row my-row">
         <div class="col my-col">
-        <h1>Welcome <?php echo $_SESSION['studentid']; ?> </h1>
+        <h1>Welcome <?php echo $_SESSION['studentid']; ?> <style>h1{color:white};</style></h1>
     <?php
     $student=$_SESSION['studentid'];
     $sql="SELECT * from upload WHERE studentid!= $student order by rand() LIMIT 1 ";
@@ -145,7 +143,7 @@ else{
     </div>
     <div class="col my-col align-self-center">
     <form action="" method="POST">
-            <p>GRADING</p>
+            <p>GRADING <style>p{color:white};</style></p>
             <?php
             if(isset($error)){
                 foreach($error as $error){
@@ -167,7 +165,7 @@ else{
     </div>
 
     </div>
-
+</div>
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 </body>

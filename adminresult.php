@@ -13,19 +13,19 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdminResult</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="full-page">
+    <div class="banner">
         <div class="navbar">
-        <img src="Img/iReview.png" alt="logo">
-            <h2>IReview</h2>
+        <img src="Img/200.png" alt="logo">
+        <h2>Welcome <?php echo $_SESSION['adminid']; ?> </h2>
             <nav>
-                <ul id='MenuItems'>
-                <h1>Welcome <?php echo $_SESSION['adminid']; ?> </h1>
+                <ul>
+                
                 <li><a href="adminmain.php">Home</a></li>
-                <li><a href="viewtable.php">View Upload Table</a></li>
+                <li><a href="viewtable.php">View files Uploaded </a></li>
                 <li><a href="logout.php">Log Out</a></li>
                 </ul>
             </nav>
@@ -36,7 +36,7 @@ session_start();
         ?>
        
 
-        <p>Select Course:</p>
+        <p>Select Course: <style>p{color:white};</style></p>
         <form action="" method="POST">
         <select name="course">
           <?php
@@ -51,7 +51,7 @@ session_start();
         </select>
         </form>
 
-    <h2>Student Result </h2>
+    <h2>Student Result <style>h2{color:white};</style> </h2>
     <table class="table">
         <th>
             <tr>

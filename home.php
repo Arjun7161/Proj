@@ -10,7 +10,16 @@
 </head>
 <body>
 <div class="banner">
-<img src="Img/iReview.png" alt="logo">
+
+<img src="Img/big.png" alt="logo" class="logos">
+<div class="navbar">
+            <ul>
+                <li><a href="about.php">About</a></li>
+                
+            </ul>
+
+
+    </div> 
 <section>
     <div class="content">
     <div>

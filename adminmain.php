@@ -19,15 +19,13 @@ session_start();
 <body>
 <div class="banner">
     <div class="navbar">
-    <img src="Img/iReview.png"  class="logo" alt="logo">
+    <img src="Img/200.png"  class="logo" alt="logo">
     <h2>Welcome <?php echo $_SESSION['adminid']; ?></h2>
             <ul>
-            
-                <li><a href="adminmain.php">Home</a></li>
                 <li><a href="create.php">Create Table</a></li>
-                <li><a href="viewtable.php">View Upload Table</a></li>
-                <li><a href="adminresult.php">View Result Table</a></li>
-                <li><a href="adminsignup.php">Sign Up</a></li>
+                <li><a href="viewtable.php">View Files Uploaded</a></li>
+                <li><a href="adminresult.php">View Grades</a></li>
+                <li><a href="adminsignup.php">Create Admin Profile</a></li>
                 <li><a href="logout.php">Log Out</a></li>
             </ul>
 
