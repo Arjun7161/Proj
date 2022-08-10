@@ -53,7 +53,7 @@ if(!isset($_SESSION['adminid'])){
         </select>
         </form>
 
-    <h2>Student Upload File Table <style>h2{color:white};</style></h2>
+    <h2> Uploaded Files<style>h2{color:white};</style></h2>
     <table class="table">
         <th>
             <tr>
