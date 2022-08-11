@@ -60,7 +60,7 @@ session_start();
                 <th> Presentation</th>
                 <th> Content</th>
                 <th> Reference</th>
-                <th> Final Grade</th>
+                <th> Total(in %)</th>
             </tr>
         </th>
         <tbody>

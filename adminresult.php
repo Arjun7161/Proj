@@ -61,7 +61,7 @@ session_start();
                 <th> Presentation</th>
                 <th> Content</th>
                 <th> Reference</th>
-                <th> Final Grade</th>
+                <th> Total(in %)</th>
                 <th> Grade</th>
                 <th> Update</th>
                 <th> Delete</th>
