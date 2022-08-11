@@ -18,11 +18,11 @@
 
     </div>    
     <div class="content">
-    <p>
+    <h1>
 iReview is a secure application created for the purpose of simplifying and optimising the process of peer review within higher education institutions.
 Students are able to submit their own work for review and they are also able to review the work of their peers.
 Anonymity of the students is maintained in order to avoid bias during the evaluation / review process. The identification of assessors and students are only available to Administrators.
-Therefore, the application aims to provide users a hassle-free, safe and secure environment for peer review.</p>
+Therefore, the application aims to provide users a hassle-free, safe and secure environment for peer review.</h1>
 </div>
 </div>
 </body>
