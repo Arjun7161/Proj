@@ -23,11 +23,11 @@
 <section>
     <div class="content">
     <div>
-    <img src="Img/admin1.png" alt="logo">
-        <li><a href="adminlogin.php">Admin Log In <style>a{color: white;}</style></a></li><br>
+    <img src="Img/admin1.png" alt="logo"><br>
+        <a href="adminlogin.php">Admin Log In <style>a{color: white;text-transform: uppercase;}</style></a><br>
         <br>
-        <img src="Img/student1.jpg" alt="logo">
-        <li><a href="login.php">Student Log In</a></li>
+        <img src="Img/student1.jpg" alt="logo"><br>
+        <a href="login.php">Student Log In</a>
     </div>
     </div>
     </div>
