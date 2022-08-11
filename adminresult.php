@@ -63,7 +63,8 @@ session_start();
                 <th> Reference</th>
                 <th> Final Grade</th>
                 <th> Grade</th>
-                <th colspan="2"> Edit/Delete</th>
+                <th> Update</th>
+                <th> Delete</th>
             </tr>
         </th>
         <tbody>
